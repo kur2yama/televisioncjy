@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="aliplayer-box">
-      <!-- <img src="http://img.cjyun.org/a/10140/201811/29752bf7ffbea956d19fff2415738051.png" alt="" class="audio-poster" v-if="playtoggle=='audio'"> -->
+      <img src="http://res.cjyun.org/t/site/10008/6fd52b21978e4534397ad7bea6ec6b0d/assets/cjmedia/logo_774.jpg" alt="" class="audio-poster" v-if="playtoggle=='audio'">
       <vue-aliplayer-v2
         :source="url"
         ref="VueAliplayerV2"
@@ -56,7 +56,7 @@ export default {
         }).catch(error => {
           console.log(error)
         })
-        console.log(this.$route.query)
+        console.log(this.$route.params)
   },
   methods: {
     play() {
