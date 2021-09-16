@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="aliplayer-box">
-      <img src="http://res.cjyun.org/t/site/10008/6fd52b21978e4534397ad7bea6ec6b0d/assets/cjmedia/logo_774.jpg" alt="" class="audio-poster" v-if="playtoggle=='audio'">
+      <img :src="audioPoster" alt="" class="audio-poster" v-if="playtoggle=='audio'">
       <vue-aliplayer-v2
         :source="url"
         ref="VueAliplayerV2"
@@ -49,7 +49,8 @@ export default {
       audioList: audioSource,
       currentList: videoSource,
       playid: 1,
-      playtoggle: 'video'
+      playtoggle: 'video',
+      audioPoster: "http://res.cjyun.org/t/site/10008/6fd52b21978e4534397ad7bea6ec6b0d/assets/cjmedia/logo_774.jpg"
     };
   },
   mounted() {
@@ -60,7 +61,7 @@ export default {
     } else {
       this.getFirstAuth('http://live21-cjy.hbtv.com.cn/hbtv/hbtv-hbws.m3u8')
     }
-    console.log(this.$route.params.type)
+
 
   },
   methods: {
@@ -106,6 +107,7 @@ export default {
     switchSource(item) {
       var _this = this;
       this.playid = item.id;
+      _this.audioPoster = item.poster || ""
       if (item.isAuth) {
         getAuth({origin_stream: item.url}).then(res => {
           if (res.state) {
