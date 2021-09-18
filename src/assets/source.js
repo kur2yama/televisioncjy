@@ -25,7 +25,7 @@ export const videoSource = [
   },
   {
     name: '湖北影视',
-    url: 'http://live.cjyun.org/hubeitv/s10008-live-hbys.m3u8',
+    url: 'http://live21-cjy.hbtv.com.cn/hbtv/hbtv-hbys.m3u8',
     id: 17,
     isAuth: true
   },
