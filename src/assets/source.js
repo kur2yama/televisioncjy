@@ -37,7 +37,7 @@ export const videoSource = [
   },
   {
     name: '湖北教育',
-    url: 'http://live21-cjy.hbtv.com.cn/hbtv/hbtv-hbls.m3u8',
+    url: 'http://live21-cjy.hbtv.com.cn/hbtv/hbtv-hbjy.m3u8',
     id: 6,
     isAuth: true
   },
